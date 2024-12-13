@@ -1,8 +1,41 @@
+/* Importa a fonte "Poppins" do Google Fonts, incluindo vários pesos e estilos. */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* Define variáveis CSS globais para reutilização de cores e estilos no projeto. */
+/*Quando eu defino as variaveis dentro do root, ele fica disponiveis para todo o documento, prevalecendo sobre o html*/
+:root {
+    --fist-color: #0e2431; /* Cor principal */
+    --second-color: #6a59d1; /* Cor secundária */
+    --third-color: #777; /* Cor terciária */
+
+    --hover-color: #614fd0; /* Cor para estados de hover */
+
+    --body-bg-color: #fefefe; /* Cor de fundo do corpo */
+    --card-bg-color: #fff; /* Cor de fundo para cartões */
+    --modal-bg-color: #fff; /* Cor de fundo para modais */
+    --bg-transparent-color: rgba(0,0,0,0.1); /* Cor de fundo com transparência */
+    --transparent-color-01: rgba(0,0,0,0.1); /* Transparência preta */
+    --transparent-color-02: rgba(106,89,209,0.1); /* Transparência da cor secundária */
+    --line-color: #d7d7d7; /* Cor para linhas */
+    --color-filter: invert(1); /* Filtro para inversão de cores */
+    --box-shadow: 0px 0px 20px rgb(0 0 0 / 10%); /* Sombra para elementos */
+
+    --small-font-size: 0.9em; /* Tamanho de fonte pequeno */
+    --normal-font-size: 1em; /* Tamanho de fonte normal */
+    --sroll-bar-color: #c5cadf; /* Cor da barra de rolagem */
+    --scroll-thumb-hover-color: #454f6b; /* Cor do thumb da barra de rolagem no hover */
+}
+
+/* Remove margens e paddings padrões de todos os elementos, 
+   aplica o modelo de caixa padrão e define a fonte global. */
+* {
+    margin: 0; /*Padding ajusta o espaçamento do lado de fora (espaço externo).*/
+    padding: 0; /*Padding ajusta o espaçamento de dentro (espaço interno)*/
+    box-sizing: border-box; /*Controla como a largura (width) e a altura (height), incluindo borda e padding*/
+    font-family: 'Poppins', sans-serif; /* Fonte importada */
+}
+
+/* Define um comportamento suave para rolagem ao navegar na página e estilizando toda a página, incluindo áreas fora do conteúdo (como o fundo geral). */
+html {
+    scroll-behavior: smooth;
 }
